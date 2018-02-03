@@ -113,7 +113,7 @@ app = new Vue({
       obj.table.push({id: 1, square:2});
       var json = JSON.stringify(obj);
       var fs = require('fs');
-      console.log(fs)
+      console.log()
       //fs.writeFile('myjsonfile.json', json, 'utf8', callback);
 
       function callback(e){

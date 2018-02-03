@@ -50,9 +50,7 @@ body,html{
   flex-direction: row;
   padding: 1em
 }
-.slide{
-  /* padding: 1em; */
-}
+
 .content {
   flex: 2 1 auto;
   
@@ -61,11 +59,12 @@ body,html{
 
 .slide  > .contentContainer > .imgContainer{
   max-height: 100%;
-  max-width: 100%;
+  max-width: 50%;
   flex: 1 1 auto;
 }
 
 img{
   max-height:100%;
+  max-width: 100%;
 }
 
