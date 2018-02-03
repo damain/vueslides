@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body >
+    <div id="app">
+        <div  @keyup.right="nextSlide">
+          <div class="slideControls">
+            <button @click="previousSlide"><</button>
+            <button @click="nextSlide">></button>
+          </div>
+          
+          <div ref="slideContainer" id="slideContainer">
+            <slide :item="item" v-for="(item, slideId) in slides" :index="slideId" :key="'slide'+slideId"></slide>
+          </div>  
+            
+        </div>
+    </div>
+
+<!--     
+    <article>
+        <header>{{item.title}}</header>
+        <header class="subtitle" v-if="item.subtitle">{{item.subtitle}}</header>
+        <div class="content">{{item.content}}</div>
+    </article>
+     -->
+    
+    <script src="index.js"></script>
+  </body>
+</html>
+

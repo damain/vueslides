@@ -1,0 +1,10 @@
+{
+  "name": "something",
+  "app": "my-app",
+  "dependencies": {
+    "vue": "^2.5.13"
+  },
+  "browser": {
+    "vue": "vue/dist/vue.common.js"
+  }
+}

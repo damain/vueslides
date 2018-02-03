@@ -1,0 +1,24 @@
+{
+  "slides":[
+    {
+      "type":"normal",
+      "title":"slide1",
+      "subtitle": "my new subtitle",
+      "content":"some sample content",
+      "backgroundColor": "red",
+      "backgroundImage": "images/test.png",
+      "image":"images/test.png"
+    },
+    {
+      "type":"normal",
+      "title":"slide2",
+      "content":"some other sample content2",
+      "image":"images/test2.png"
+    },
+    {
+      "type":"normal",
+      "title":"slide3",
+      "content":"some other sample content3"
+    }
+  ]
+}
