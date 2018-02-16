@@ -297,8 +297,6 @@ app = new Vue({
   }
 })
 
-
-
 //Utility functions that will be hoisted when this file is executed are included below.
    
 function scrollTo(element, to, duration) {
