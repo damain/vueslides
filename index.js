@@ -52,7 +52,7 @@ Vue.component('slide',{
         <p v-if="item.pen"  data-theme-id="0" :data-slug-hash="item.pen.hash" data-default-tab="html,result" :data-user="item.pen.user" data-embed-version="2" :data-pen-title="item.pen.title" data-preview="true" class="codepen">See the Pen <a :href="'https://codepen.io/'+item.pen.user+'/pen/'+item.pen.hash+'/'">{{item.pen.title}}</a> by Damain Joseph (<a :href="'https://codepen.io/'+item.pen.user">@{{item.pen.user}}</a>) on <a href="https://codepen.io">CodePen</a>.</p>
         <div class="videoWrapper"  v-if="item.youtube|| item.video">
           <iframe v-if="item.youtube" :width="imgWidth" :height="imgHeight" :src="'https://www.youtube.com/embed/'+item.youtube+'?rel=0'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          <video v-if="item.video" :src="item.video" controls preload="none"/>
+          <video v-if="item.video" :src="item.video" controls preload="none" :width="imgWidth" :height="imgHeight"/>
         </div>
       </div>
     </div>
