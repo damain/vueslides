@@ -47,11 +47,12 @@ Vue.component('slide',{
           <li>{{listItem.li}}</li>
         </ul>
       </div>
-      <div v-if="item.image || item.pen || item.youtube" class="imgContainer" ref="imageContainer" :class="{imageHalf: item.content || item.list }">
+      <div v-if="item.image || item.pen || item.youtube ||item.video" class="imgContainer" ref="imageContainer" :class="{imageHalf: item.content || item.list }">
         <img v-if="item.image" :src="item.image"/>
         <p v-if="item.pen"  data-theme-id="0" :data-slug-hash="item.pen.hash" data-default-tab="html,result" :data-user="item.pen.user" data-embed-version="2" :data-pen-title="item.pen.title" data-preview="true" class="codepen">See the Pen <a :href="'https://codepen.io/'+item.pen.user+'/pen/'+item.pen.hash+'/'">{{item.pen.title}}</a> by Damain Joseph (<a :href="'https://codepen.io/'+item.pen.user">@{{item.pen.user}}</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-        <div class="videoWrapper"  v-if="item.youtube">
-          <iframe :width="imgWidth" :height="imgHeight" :src="'https://www.youtube.com/embed/'+item.youtube+'?rel=0'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="videoWrapper"  v-if="item.youtube|| item.video">
+          <iframe v-if="item.youtube" :width="imgWidth" :height="imgHeight" :src="'https://www.youtube.com/embed/'+item.youtube+'?rel=0'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <video v-if="item.video" :src="item.video" controls preload="none"/>
         </div>
       </div>
     </div>
@@ -127,7 +128,7 @@ app = new Vue({
       slides: p.slides, //holds the slides array
       transitionTime: 500, // holds the duration of transitions
       overview: false, // used to activate overview class to scale the view so all screens can be viewed
-      goto: {status:false, slide: 0} // model for the goto form
+      goto: {status:false, slide: null} // model for the goto form
     }
   },
   mounted(){
@@ -193,6 +194,11 @@ app = new Vue({
       }else if(e.which == 13){
         // does stuff when enter is pressed
         if(that.goto.status){
+          if (that.goto.slide > that.slides.length){
+            // sets the number to the last slide if the number entered 
+            // is greater than the amount of slides in the presentation
+            that.goto.slide = that.slides.length
+          }
           that.changeSlide()
         }
       }else if(e.which === 78){
@@ -274,7 +280,9 @@ app = new Vue({
       // changes the slide based on the number entered on the goto form
       console.log("changing slide")
       //setting index
-      this.index = parseInt(this.goto.slide) - 1
+    
+        this.index = parseInt(this.goto.slide) - 1
+      
       //go to new index
       this.goto.status = false
       this.goToSlide()

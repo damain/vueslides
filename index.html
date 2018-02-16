@@ -26,8 +26,7 @@
           <!-- All slide go within the slide container -->
           <div ref="slideContainer" id="slideContainer">
             <slide :overview="overview" :blank="blank" :item="item" v-for="(item, slideId) in slides" :index="slideId" :key="'slide'+slideId" v-on:select-slide="selectedFromOverview" :show-number="showNumber"></slide>
-          </div>  
-            
+          </div>
         </div>
     </div>
 

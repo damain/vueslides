@@ -114,6 +114,64 @@
         "hash": "zRPXLb"
       }
 
+    },
+    
+    {
+      "type":"normal",
+      "title":"Code Editors",
+      "content": `
+
+        A code editor is a software applcation that developers use to write code. /n
+        There are many code editors e.g. Sublime, Atom, Textmate, Visual Studio Code, etc. /n
+        While a code editor is not nescessary in order to write code (you could use notepad).
+        It makes writing code a lot easier as it has very useful features.
+      `,
+      "image": "images/codeEditor.png"
+
+    },
+    {
+      "type":"normal",
+      "subtitle":"Setting up a project",
+      "content": `
+        Lets get our project set up
+      `,
+      "list": [
+        {"li": `Create a folder in the Documents folder called 'code'`},
+        {"li": "Inside of the code folder we create a new folder called 'firstApp'"},
+        {"li": "Open your code editor"},
+        {"li": "Go to File > Open"},
+        {"li": "Navigate to the firstApp folder we just created"},
+        {"li": "Select it and click open"}
+      ]
+
+    },
+    {
+      "type":"normal",
+      "subtitle":"Setting up a project (cont'd)",
+      "content": `
+        Now we have the folder we created opened in our code editor
+      `,
+      "list": [
+        {"li": `Click on the new file icon and name the file "index.html"`},
+        {"li": `Press Enter`}
+      ],
+      "video": "videos/openNewFile.mov"
+
+    },
+    {
+      "type":"normal",
+      "title":"HTML",
+      "subtitle":"Creating a HTML page",
+      "content": `
+        just like zip files are saved with the file extention ".zip" /n
+        HTML file are saved with the extention ".html"/n
+        to create a new 
+      `,
+      "pen":{
+        "user": "damain",
+        "hash": "zRPXLb"
+      }
+
     }
   ]
 }

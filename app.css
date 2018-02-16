@@ -118,10 +118,13 @@ floatRight{
 }
 
 #goto{
+  font-family:"roboto" ;
   display: block;
-  left:0;
+  left:10px;
+  top: 10px;
+  border-radius: 5px;
   position: fixed;
-  background-color: red;
+  background-color: #fff;
   z-index:100;
   align-items: center;
   padding: 2vh;
@@ -129,6 +132,12 @@ floatRight{
 #goto > label{
   display:block;
   width: 100%;
+}
+#goto > input{
+  width: 100%;
+  outline: none;
+  border: 0px solid cadetblue;
+  border-bottom: 2px solid cadetblue;
 }
 
 [v-cloak]{
