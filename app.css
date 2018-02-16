@@ -1,3 +1,11 @@
+#app{
+  transition: all 1s;
+}
+
+#app.overview{
+  transform: scale(.3);
+}
+
 section.slide{
   font-family:roboto;
   background-color: #1e1e1e;
@@ -19,14 +27,14 @@ section.slide{
 }
 .headerContainer > header.title{
   margin-top: .3em;
-  font-size: 5em;
+  font-size: 5vw;
   text-align:center;
 }
 .container{
   margin-top: 1em;
 }
-section.slide > header.subtitle{
-  font-size: 3em;
+.headerContainer > header.subtitle{
+  font-size: 3vw;
 }
 body,html{
   padding:0px;
@@ -48,23 +56,90 @@ body,html{
 .slide > .contentContainer{
   display: flex;
   flex-direction: row;
-  padding: 1em
+  padding: 1em;
+  height:100%;
 }
 
 .content {
   flex: 2 1 auto;
-  
+  font-size: 2.5vw;
+  overflow: hidden;
 }
 
 
 .slide  > .contentContainer > .imgContainer{
   max-height: 100%;
-  max-width: 50%;
+  max-width: 100%;
   flex: 1 1 auto;
+  align-items: center;
+
 }
 
 img{
   max-height:100%;
   max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
+floatLeft{
+  float: left;
+}
+
+floatRight{
+  float: right;
+}
+
+.half{
+  width: 50%;
+}
+.imageHalf{
+  width:50%;
+  max-height: 100%;
+  max-width: 50%;
+  flex: 1 1 auto;
+}
+
+.slideNumber{
+  font-size: 1000%;
+  z-index: 10000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.blank{
+  font-size: 1000%;
+  z-index: 10001;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+#goto{
+  display: block;
+  left:0;
+  position: fixed;
+  background-color: red;
+  z-index:100;
+  align-items: center;
+  padding: 2vh;
+}
+#goto > label{
+  display:block;
+  width: 100%;
+}
+
+[v-cloak]{
+  display: none;
+}
+
+/* Transition effects */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+/* end transition effects */

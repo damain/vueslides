@@ -4,28 +4,37 @@
     <link rel="stylesheet" href="app.css">
   </head>
   <body >
-    <div id="app">
-        <div  @keyup.right="nextSlide">
+    <!-- overview class causes the slideshow to scale so that multiple slides can be viewed at once -->
+    <div id="app" :class="{overview: overview}" v-cloak>
+        <div  >
+          <!-- All divs besides SlideContainer need to be removed from the flow of the page -->
+          
           <div class="slideControls">
+            <!-- Displays navigation controls on the page -->
             <button @click="previousSlide"><</button>
             <button @click="nextSlide">></button>
+            <button id="fs" @click="fullScreen">[ ]</button>
           </div>
-          
+          <!-- transition tag enables the css fade transition -->
+          <transition name="fade">
+            <div v-if="goto.status" id="goto">
+              <!-- displays a form for us to go to a particular slide -->
+              <label for="gotoInput">Enter a slide number to change to </label>
+              <input id="gotoInput" ref="goto" type="number" v-model="goto.slide">
+            </div>
+          </transition>
+          <!-- All slide go within the slide container -->
           <div ref="slideContainer" id="slideContainer">
-            <slide :item="item" v-for="(item, slideId) in slides" :index="slideId" :key="'slide'+slideId"></slide>
+            <slide :overview="overview" :blank="blank" :item="item" v-for="(item, slideId) in slides" :index="slideId" :key="'slide'+slideId" v-on:select-slide="selectedFromOverview" :show-number="showNumber"></slide>
           </div>  
             
         </div>
     </div>
 
-<!--     
-    <article>
-        <header>{{item.title}}</header>
-        <header class="subtitle" v-if="item.subtitle">{{item.subtitle}}</header>
-        <div class="content">{{item.content}}</div>
-    </article>
-     -->
-    
+     <!-- Embed script for Codepen samples -->
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+    <!-- Script for application Logic -->
     <script src="index.js"></script>
   </body>
 </html>

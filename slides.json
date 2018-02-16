@@ -1,24 +1,119 @@
 {
   "slides":[
+  
     {
-      "type":"normal",
-      "title":"slide1",
-      "subtitle": "my new subtitle",
-      "content":"some sample content",
-      "backgroundColor": "red",
-      "backgroundImage": "images/test.png",
-      "image":"images/test.png"
+      "type": "normal",
+      "title": "Web Programming",
+      "image":"images/HTML5_CSS_JavaScript.png",
+      "content": `Many applications have switched from being Native desktop application to ones that run in the web browser /n 
+      These applications largely use the following technologies:
+      `,
+      "list": [
+        {"li":"HTML"},
+        {"li":"CSS"},
+        {"li":"Javascript"}
+      ]
+    },
+    {
+      "type": "normal",
+      "title": "Web Programming",
+      "image": "images/vDoIT_html-css-logo1.jpg",
+      "list": [
+        {"li":"HTML- used to create the content and structure of a website"},
+        {"li":"CSS- changes the way a website looks"},
+        {"li":"Javascript- the programming language of the browser"}
+      ]
     },
     {
       "type":"normal",
-      "title":"slide2",
-      "content":"some other sample content2",
-      "image":"images/test2.png"
+      "title":"HTML",
+      "subtitle":"Tags",
+      "pen":{
+        "user": "damain",
+        "hash": "paeQZY"
+      },
+      "content":`
+      HTML is used to create content and structure of a webpage /n
+      It is made up of "tags" /n
+      Each Tag has a different purpose and creates a different element on the page 
+      `
     },
     {
       "type":"normal",
-      "title":"slide3",
-      "content":"some other sample content3"
+      "title":"HTML",
+      "subtitle":"Tags (cont'd)",
+      "image": "images/html-tags.jpg",
+      "content":`
+      Tags are created from tagnames bounded by < > /n
+      example tagnames are:
+      `,
+      "list": [
+        {"li":"h1"},
+        {"li":"img"},
+        {"li":"input"}
+      ]
+    },
+    {
+      "type":"normal",
+      "title":"HTML",
+      "subtitle":"Elements",
+      "content":`
+      The content of a tag is written between the opening and closing tags. 
+      Here we see the h2 tag has the content "Links" /n 
+      A tag and its content is called an element. /n
+      Elements can be nested one inside the other. Nested elements are usually indented
+      `, 
+      
+      "pen":{
+        "user": "damain",
+        "hash": "GQOLvZ"
+      }
+    },
+    {
+      "type":"normal",
+      "title":"HTML",
+      "subtitle":"Attributes",
+      "image":"images/HTMLelement.gif",
+      "content":`
+      Attributes add more meaning to tags./n
+      For example in this (div) tag we see the "id" attribute /n
+      Attributes usually have a name and is assigned a value /n
+      Here we see the "id" attribute being assigned the name "footer"
+
+      `
+
+    },
+    {
+      "type":"normal",
+      "title":"HTML",
+      "subtitle":"Attributes (cont'd)",
+      "content":`
+      Some common attrubutes are :
+      `, 
+      "list": [
+        {"li":"href"},
+        {"li":"id"},
+        {"li":"class"}
+      ],
+      "pen":{
+        "user": "damain",
+        "hash": "YeEgRg"
+      }
+    },
+    {
+      "type":"normal",
+      "title":"HTML",
+      "subtitle":"Basic page structure",
+      "content": `
+        HTML5 pages have the layout on the left./n
+        The head is used to load resources and setup the page before content is displayed. /n
+        All content to be displayed should be located inside of the body tag.
+      `,
+      "pen":{
+        "user": "damain",
+        "hash": "zRPXLb"
+      }
+
     }
   ]
 }
